@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\ReportExport;
+use App\Http\Requests\ReportRequest;
 use App\Models\ProductVariant;
 use App\Models\Report;
 use App\Models\User;
@@ -57,15 +58,13 @@ class ReportController extends Controller
         return response()->json(["message" => "Mahsulot sotilgani tasdiqlandi!"], 201);
     }
 
-    public function report()
+    public function report(ReportRequest $request)
     {
-        $startDate = request('startDate');
-        $endDate = request('endDate');
+        $reports = Report::whereBetween('sale_date', [$request->date])->get();
 
         $writer = WriterEntityFactory::createXLSXWriter();
         $filePath = 'storage/reports/' . date('Y_m_d_H_i_s') . 'report.xlsx';
         $writer->openToFile($filePath);
-        $reports = Report::whereBetween('sale_date', [$startDate, $endDate])->get();
         $writer->addRow(WriterEntityFactory::createRowFromArray([
             'Mahsulot id raqami',
             'Mahsulot nomi',
