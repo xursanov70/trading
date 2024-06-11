@@ -23,7 +23,7 @@ class ReportRequest extends FormRequest
     {
         return [
             "date" => "required|array",
+            "date.*" => "date"
         ];
     }
-
 }

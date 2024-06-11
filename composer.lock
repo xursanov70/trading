@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b77e121016783dd5cfe6469cbd865b1",
+    "content-hash": "4c6b6abf4eea3363a82a874678eeb479",
     "packages": [
         {
             "name": "box/spout",
@@ -6122,6 +6122,49 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.2.7"
             },
             "time": "2023-12-08T13:03:43+00:00"
+        },
+        {
+            "name": "usmonaliyev/laravel-telegram-notifier",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Temur5319436/laravel-telegram-notifier.git",
+                "reference": "24706f76b7a0bc439caaac0a6747357d5cb70038"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Temur5319436/laravel-telegram-notifier/zipball/24706f76b7a0bc439caaac0a6747357d5cb70038",
+                "reference": "24706f76b7a0bc439caaac0a6747357d5cb70038",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Usmonaliyev\\LaravelTelegramNotifier\\LaravelTelegramNotifierServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Usmonaliyev\\LaravelTelegramNotifier\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Temur5319436",
+                    "email": "temur5319436@gmail.com"
+                }
+            ],
+            "description": "This package send errors and messages to your telegram group or chat.",
+            "support": {
+                "source": "https://github.com/Temur5319436/laravel-telegram-notifier/tree/v1.2.0"
+            },
+            "time": "2024-02-03T12:08:34+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
